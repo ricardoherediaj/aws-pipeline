@@ -47,6 +47,11 @@ Serverless Data Lake that processes **12 financial data entities** (customers, a
 └─────────────────────────────────────────────────────────┘
 ```
 
+**🎨 Interactive Architecture Diagram:**
+Open `aws-pipeline-architecture.excalidraw.json` in:
+- **VS Code** with [Excalidraw Extension](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor)
+- **Online Editor** at https://excalidraw.com (File → Open → Upload JSON)
+
 ---
 
 ## 🛠️ Technologies
