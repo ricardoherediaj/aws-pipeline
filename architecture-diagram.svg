@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="700" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="#232f3e" stroke="#FF9900" stroke-width="3"/>
+  <text x="30" y="40" font-size="28" font-weight="bold" fill="#FF9900" font-family="Arial">AWS Finance Data Lake Pipeline</text>
+
+  <!-- Medallion Label -->
+  <text x="30" y="100" font-size="16" font-weight="bold" fill="#232f3e" font-family="Arial">Medallion Architecture: Bronze → Silver → Gold</text>
+
+  <!-- Bronze Card -->
+  <rect x="30" y="140" width="220" height="180" fill="#FFF4E6" stroke="#FF9900" stroke-width="3" rx="12"/>
+  <text x="140" y="165" font-size="14" font-weight="bold" fill="#FF9900" text-anchor="middle" font-family="Arial">BRONZE - Raw Data</text>
+  <text x="140" y="210" font-size="32" text-anchor="middle" font-family="Arial">📦 S3</text>
+  <text x="50" y="240" font-size="11" fill="#666" font-family="Arial">
+    <tspan x="50" dy="0">• 12 CSV files</tspan>
+    <tspan x="50" dy="15">• Finance entities</tspan>
+    <tspan x="50" dy="15">• Partitioned by date</tspan>
+    <tspan x="50" dy="15">• ~50MB raw size</tspan>
+    <tspan x="50" dy="15">• Low cost storage</tspan>
+  </text>
+
+  <!-- Silver Card -->
+  <rect x="290" y="140" width="220" height="180" fill="#F3E5F5" stroke="#7d3edb" stroke-width="3" rx="12"/>
+  <text x="400" y="165" font-size="14" font-weight="bold" fill="#7d3edb" text-anchor="middle" font-family="Arial">SILVER - Processed</text>
+  <text x="400" y="210" font-size="32" text-anchor="middle" font-family="Arial">🕷️ Glue + 📦 S3</text>
+  <text x="310" y="240" font-size="11" fill="#666" font-family="Arial">
+    <tspan x="310" dy="0">• Glue Crawler</tspan>
+    <tspan x="310" dy="15">• Auto catalog</tspan>
+    <tspan x="310" dy="15">• 24 tables</tspan>
+    <tspan x="310" dy="15">• Parquet format</tspan>
+    <tspan x="310" dy="15">• 30% compression</tspan>
+  </text>
+
+  <!-- Gold Card -->
+  <rect x="550" y="140" width="220" height="180" fill="#E3F2FD" stroke="#0066cc" stroke-width="3" rx="12"/>
+  <text x="660" y="165" font-size="14" font-weight="bold" fill="#0066cc" text-anchor="middle" font-family="Arial">GOLD - Analytics</text>
+  <text x="660" y="210" font-size="32" text-anchor="middle" font-family="Arial">🔍 Athena</text>
+  <text x="570" y="240" font-size="11" fill="#666" font-family="Arial">
+    <tspan x="570" dy="0">• SQL queries</tspan>
+    <tspan x="570" dy="15">• Serverless</tspan>
+    <tspan x="570" dy="15">• 10x faster</tspan>
+    <tspan x="570" dy="15">• Cost optimized</tspan>
+    <tspan x="570" dy="15">• &lt;$2/month</tspan>
+  </text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#232f3e" />
+    </marker>
+  </defs>
+
+  <!-- Arrow Bronze → Silver -->
+  <line x1="250" y1="230" x2="290" y2="230" stroke="#232f3e" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow Silver → Gold -->
+  <line x1="510" y1="230" x2="550" y2="230" stroke="#232f3e" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Security Section -->
+  <rect x="30" y="360" width="740" height="160" fill="#FFF3CD" stroke="#CC0000" stroke-width="2" stroke-dasharray="5,5" rx="8"/>
+  <text x="50" y="390" font-size="14" font-weight="bold" fill="#CC0000" font-family="Arial">🔐 Security &amp; Access Control (IAM Roles &amp; Policies)</text>
+  <text x="50" y="420" font-size="11" fill="#333" font-family="Arial">
+    <tspan x="50" dy="0">• S3 Access: GetObject, PutObject, ListBucket permissions on raw/processed/analytics buckets</tspan>
+    <tspan x="50" dy="18">• Glue Access: StartCrawler, GetDatabase, GetTables for automated data cataloging</tspan>
+    <tspan x="50" dy="18">• Athena Access: QueryExecution, GetQueryResults, S3 location access for querying</tspan>
+    <tspan x="50" dy="18">• Encryption: KMS key access for encrypted data at rest in S3</tspan>
+    <tspan x="50" dy="18">• Principle of Least Privilege: Each service has minimal required permissions</tspan>
+  </text>
+
+  <!-- Features Section -->
+  <rect x="30" y="540" width="740" height="140" fill="#F0F8FF" stroke="#0066cc" stroke-width="2" rx="8"/>
+  <text x="50" y="570" font-size="14" font-weight="bold" fill="#0066cc" font-family="Arial">✨ Key Features &amp; Optimizations</text>
+  <text x="50" y="600" font-size="11" fill="#333" font-family="Arial">
+    <tspan x="50" dy="0">🚀 Automated Pipeline: Glue Crawler detects schema changes daily and catalogs new data automatically</tspan>
+    <tspan x="50" dy="18">💾 Cost Optimization: Parquet compression saves 30% storage; S3 Lifecycle moves raw data to Glacier (83% savings)</tspan>
+    <tspan x="50" dy="18">⚡ Performance: Partition pruning enables 10x faster queries; serverless Athena scales on-demand</tspan>
+    <tspan x="50" dy="18">📊 Medallion Pattern: Clear separation of concerns (raw/processed/analytics) for data governance and quality</tspan>
+  </text>
+</svg>

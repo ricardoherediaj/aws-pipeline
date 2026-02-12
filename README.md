@@ -29,28 +29,11 @@ Serverless Data Lake that processes **12 financial data entities** (customers, a
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    AWS Data Lake                        │
-├─────────────────────────────────────────────────────────┤
-│  📁 S3 (rherediaiam-datalake-2026)                     │
-│  ├── raw/finance/               [CSV, partitioned]     │
-│  ├── processed/finance/         [Parquet, 30% smaller]│
-│  ├── analytics/reports/         [Aggregations]        │
-│  └── athena-results/            [Query outputs]        │
-│                                                         │
-│  🕷️  AWS Glue Data Catalog                              │
-│  ├── Database: datalake_db                             │
-│  └── Tables: 24 (12 CSV + 12 Parquet)                 │
-│                                                         │
-│  🔍 Amazon Athena - SQL queries on S3                  │
-└─────────────────────────────────────────────────────────┘
-```
+![Architecture Diagram](architecture-diagram.svg)
 
-**🎨 Interactive Architecture Diagram:**
-Open `aws-pipeline-architecture.excalidraw.json` in:
-- **VS Code** with [Excalidraw Extension](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor)
-- **Online Editor** at https://excalidraw.com (File → Open → Upload JSON)
+**Edit the interactive diagram:**
+- **VS Code**: Install [Excalidraw Extension](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor), open `aws-pipeline-architecture.excalidraw.json`
+- **Online**: Upload to https://excalidraw.com
 
 ---
 
