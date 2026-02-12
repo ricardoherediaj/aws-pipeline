@@ -1,0 +1,13 @@
+[project]
+name = "pipeline-aws"
+version = "0.1.0"
+description = "Data Lake AWS con S3, Glue y Athena - Pipeline completo"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.35.0",
+    "pandas>=2.2.0",
+    "pyarrow>=18.0.0",
+    "python-dotenv>=1.0.0",
+    "faker>=33.0.0",
+]

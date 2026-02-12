@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv sync:*)",
+      "Bash(uv run python:*)",
+      "Bash(aws glue get-tables:*)",
+      "Bash(git:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(code --install-extension:*)"
+    ]
+  }
+}
